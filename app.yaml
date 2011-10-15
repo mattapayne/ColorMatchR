@@ -1,0 +1,17 @@
+application: colormatchr
+version: 1
+runtime: python
+api_version: 1
+
+handlers:
+- url: /admin
+  script: app.py
+  login: admin
+- url: /stylesheets
+  static_dir: assets/css
+- url: /js
+  static_dir: assets/js
+- url: /images
+  static_dir: assets/images
+- url: /.*
+  script: app.py

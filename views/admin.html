@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>ColorMatchR -Beta Signups </title>
+		<link rel="stylesheet" type="text/css" href="/stylesheets/site.css" />
+	</head>
+	<body>
+		<header>
+			<img src='/images/logo.gif' border='0'>
+		</header>
+		<section id="signups">
+			<div class='wrapper'>
+				<table>
+					<tr>
+					<th>Email</th>
+					<th>Signup Date</th>
+					</tr>
+				{% for signup in signups %}
+					<tr>
+						<td>
+							{{ signup.email }}
+						</td>
+						<td>
+							{{ signup.signup_date }}
+						</td>
+					</tr>
+				{% endfor %}
+				</table>
+			</div>
+		</section>
+		<footer><section>
+			<div class='wrapper'>
+			ColorMatchR is under active development.&nbsp;&nbsp;<a href='mailto:info@colormatchr.com'>Contact us</a></a></div></section></footer>
+	</body>
+</html>

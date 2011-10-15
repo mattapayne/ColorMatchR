@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>ColorMatchR - Save and Search for Color Matches Online</title>
+		<link rel="stylesheet" type="text/css" href="/stylesheets/site.css" />
+		<script type='text/javascript' src='/js/jquery-1.6.4.min.js'></script>
+		<script type='text/javascript' src='/js/jquery.validate.min.js'></script>
+		<script type='text/javascript' src='/js/site.js'></script>
+	</head>
+	<body>
+		<header>
+			<img src='/images/logo.gif' border='0'>
+		</header>
+		<section id="info">
+			{% if message %}
+				<div class="wrapper message topmost">
+					{{ message }}
+				</div>
+			{% endif %}
+			<div class='wrapper top'>
+			<p>ColorMatchR is an online application that allows you to create, save and search for paint color formulations. Colors can be associated with your customers.</p>
+			<p>ColorMatchR is not quite ready for public use, but if you are interested in its progress and would like early access, please sign up for our beta program. When ColorMatchR is ready for beta use, you will be notified.</p>
+			</div>
+			<div class='wrapper'>
+				<form id="beta-signup" method="POST" action="/beta_signup">
+					<label for="email">Your email address</label>
+					<input type='text' id='email', name='email' class='required' max-length="100" />
+					<div class="left">
+						<input type='submit' value="Signup for the beta!" />
+					</div>
+					<div class='clear'></div>
+				</form>
+				<div>
+					<small>(We promise not to disclose your email address to anyone else)</small>
+				</div>
+			</div>
+		</section>
+		<footer><section>
+			<div class='wrapper'>
+			ColorMatchR is under active development.&nbsp;&nbsp;<a href='mailto:info@colormatchr.com'>Contact us</a>
+			</div></section></footer>
+	</body>
+</html>
+
